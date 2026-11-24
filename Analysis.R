@@ -1,3 +1,12 @@
+# =====================================================================
+# 7COM1079 Team Research and Development Project (ds243)
+# RQ: Is there a difference in the mean change in year-on-year food price
+# inflation (12 months before vs 12 months after Russia's invasion of
+# Ukraine) between Sub-Saharan Africa, MENA, and Asia & the Caribbean?
+# =====================================================================
+
+
+
 # ---------------------------------------------------------------------
 # SECTION 1. Prepare the data                                   (Alif)
 # ---------------------------------------------------------------------
@@ -15,3 +24,20 @@ df$region <- ifelse(df$ISO3 %in% c("IRQ", "LBN", "SYR", "YEM"), "MENA",
                     ifelse(df$ISO3 %in% c("AFG", "LAO", "MMR", "HTI"), "Asia & Caribbean",
                            "Sub-Saharan Africa"))
 print(table(df$region, df$period))
+
+
+# Average inflation for each country, before and after the invasion
+before <- aggregate(Inflation ~ country + region, data = subset(df, period == "Before"), FUN = mean)
+after  <- aggregate(Inflation ~ country + region, data = subset(df, period == "After"),  FUN = mean)
+colnames(before)[3] <- "inflation_before"
+colnames(after)[3]  <- "inflation_after"
+
+
+
+
+
+
+
+
+
+
