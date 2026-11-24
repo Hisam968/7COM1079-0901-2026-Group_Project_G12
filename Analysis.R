@@ -44,6 +44,11 @@ print(table(countries$region))
 
 
 
+# Save the country-level data
+dir.create("data/processed", showWarnings = FALSE)
+write.csv(countries, "data/processed/country_change.csv", row.names = FALSE)
+print(head(countries))
+
 
 
 
