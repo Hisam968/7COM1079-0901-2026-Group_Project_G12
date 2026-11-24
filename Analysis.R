@@ -34,7 +34,13 @@ colnames(after)[3]  <- "inflation_after"
 
 
 
-
+# One row per country: before, after, and the change
+countries <- before
+countries$inflation_after <- after$inflation_after
+countries$change <- countries$inflation_after - countries$inflation_before
+countries$region <- factor(countries$region,
+                           levels = c("Sub-Saharan Africa", "MENA", "Asia & Caribbean"))
+print(table(countries$region))
 
 
 
