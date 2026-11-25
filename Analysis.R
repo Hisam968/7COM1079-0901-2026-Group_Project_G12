@@ -8,7 +8,7 @@
 
 
 # ---------------------------------------------------------------------
-# SECTION 1. Prepare the data
+# SECTION 1. Prepare the data                                   (Alif)
 # ---------------------------------------------------------------------
 df <- read.csv("data/raw/WLD_RTFP_country_2023-10-02.csv")
 print(colnames(df))

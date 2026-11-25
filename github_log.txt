@@ -1,0 +1,18 @@
+54f9b42 - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-25 - Merge remote changes and use Herts email for commits
+f49628d - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-25 - Quick update: my earlier commits showed my personal email, because I had set my Herts email only for this project folder, not globally. My laptop's global Git setting was still my personal email, from another project. I've now set my Herts email (ma25awc@herts.ac.uk) as my global Git email, so all my commits from now on will show it.
+4070df6 - Abdulmuiz Busari <ab25ahf@herts.ac.uk> - 2026-11-25 - Add legend to the boxplot
+7ff388c - Abdulmuiz Busari <ab25ahf@herts.ac.uk> - 2026-11-25 - Add zero line to the boxplot
+dfcee49 - Abdulmuiz Busari <ab25ahf@herts.ac.uk> - 2026-11-25 - Add colours for each region to the boxplot
+4e762ce - Abdulmuiz Busari <ab25ahf@herts.ac.uk> - 2026-11-25 - Add basic boxplot of the change by region (Figure 2)
+b9f534b - Omer Bin Wahid Latifi <ol25aaj@herts.ac.uk> - 2026-11-25 - Add legend to the histogram
+3ae0abe - Omer Bin Wahid Latifi <ol25aaj@herts.ac.uk> - 2026-11-25 - Add zero and median lines to the histogram
+87b1ffa - MD Hisam Bin Hyee <mh25ahl@herts.ac.uk> - 2026-11-25 - Add basic histogram of the change (Figure 1)
+4c196d7 - MD Hisam Bin Hyee <mh25ahl@herts.ac.uk> - 2026-11-25 - Add median inflation before and after by region
+9cba52e - MD Hisam Bin Hyee <mh25ahl@herts.ac.uk> - 2026-11-25 - Add median and mean change by region
+e75a0e7 - MD Hisam Bin Hyee <mh25ahl@herts.ac.uk> - 2026-11-25 - Add summary statistics of the change
+46a43d7 - MD Hisam Bin Hyee <mh25ahl@herts.ac.uk> - 2026-11-25 - Add summary of inflation before vs after
+5c6e213 - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-24 - Save the country-level data
+3bb8055 - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-24 - Calculate the change in food inflation for each country
+55ef4d1 - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-24 - Average inflation before and after for each country
+4ff42fa - Murshed Jamil Alif <ma25awc@herts.ac.uk> - 2026-11-24 - Load data and prepare study period
+acd2ff6 - Hisam Youhana <68394462+Hisam968@users.noreply.github.com> - 2026-11-24 - Initial commit
