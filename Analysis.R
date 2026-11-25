@@ -59,7 +59,7 @@ print(sd(countries$change))
 
 print(summary(countries$inflation_before))
 print(summary(countries$inflation_after))
-print(summary(countries$change))
+
 
 
 
