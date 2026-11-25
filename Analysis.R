@@ -60,6 +60,7 @@ print(sd(countries$change))
 print(summary(countries$inflation_before))
 print(summary(countries$inflation_after))
 
-
+print(aggregate(change ~ region, data = countries, FUN = median))
+print(aggregate(change ~ region, data = countries, FUN = mean))
 
 
