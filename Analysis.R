@@ -86,3 +86,24 @@ legend("topleft",
 dev.off()
 hist(countries$change, main = "Figure 1. Change in food inflation across 25 countries", xlab = "Change in food inflation (percentage points, after minus before)", ylab = "Number of countries")
 
+
+# ---------------------------------------------------------------------
+# SECTION 4.  Box Plots
+# ---------------------------------------------------------------------
+
+region_cols <- c("steelblue", "tomato", "seagreen")
+png("figures/fig2_boxplot_by_region.png", width = 900, height = 650)
+boxplot(change ~ region, data = countries,
+        col = region_cols,
+        main = "Figure 2. Change in food inflation by region",
+        xlab = "Region",
+        ylab = "Change in food inflation (percentage points, after minus before)")
+        abline(h = 0, lty = 2)
+        legend("topright",
+               legend = paste(levels(countries$region), " (n = ", table(countries$region), ")"),
+               fill   = region_cols,
+               bty    = "n")
+dev.off()
+
+
+
