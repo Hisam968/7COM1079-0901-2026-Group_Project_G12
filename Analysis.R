@@ -8,7 +8,7 @@
 
 
 # ---------------------------------------------------------------------
-# SECTION 1. Prepare the data                                   (Alif)
+# SECTION 1. Prepare the data
 # ---------------------------------------------------------------------
 df <- read.csv("data/raw/WLD_RTFP_country_2023-10-02.csv")
 print(colnames(df))
@@ -49,6 +49,17 @@ dir.create("data/processed", showWarnings = FALSE)
 write.csv(countries, "data/processed/country_change.csv", row.names = FALSE)
 print(head(countries))
 
+
+# ---------------------------------------------------------------------
+# SECTION 2. Descriptive statistics
+# ---------------------------------------------------------------------
+print(summary(countries$change))
+print(sd(countries$change))
+
+
+print(summary(countries$inflation_before))
+print(summary(countries$inflation_after))
+print(summary(countries$change))
 
 
 
