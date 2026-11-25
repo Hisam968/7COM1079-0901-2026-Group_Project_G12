@@ -8,7 +8,7 @@
 
 
 # ---------------------------------------------------------------------
-# SECTION 1. Prepare the data                                   
+# SECTION 1. Prepare the data                                   (Alif)
 # ---------------------------------------------------------------------
 df <- read.csv("data/raw/WLD_RTFP_country_2023-10-02.csv")
 print(colnames(df))
@@ -50,5 +50,39 @@ write.csv(countries, "data/processed/country_change.csv", row.names = FALSE)
 print(head(countries))
 
 
+# ---------------------------------------------------------------------
+# SECTION 2. Descriptive statistics
+# ---------------------------------------------------------------------
+print(summary(countries$change))
+print(sd(countries$change))
 
+
+print(summary(countries$inflation_before))
+print(summary(countries$inflation_after))
+
+print(aggregate(change ~ region, data = countries, FUN = median))
+print(aggregate(change ~ region, data = countries, FUN = mean))
+
+
+print(aggregate(cbind(inflation_before, inflation_after) ~ region, data = countries, FUN = median))
+
+
+# ---------------------------------------------------------------------
+# SECTION 3. Figure 1 - histogram of the change               
+# ---------------------------------------------------------------------
+dir.create("figures", showWarnings = FALSE)
+png("figures/fig1_histogram.png", width = 900, height = 650)
+hist(countries$change,
+     main = "Figure 1. Change in food inflation across 25 countries",
+     xlab = "Change in food inflation (percentage points, after minus before)",
+     ylab = "Number of countries")
+abline(v = 0, lty = 2)
+abline(v = median(countries$change), col = "red", lwd = 2)
+legend("topleft",
+       legend = c("No change (0)", "Median change"),
+       col = c("black", "red"),
+       lty = c(2, 1),
+       bty = "n")
+dev.off()
+hist(countries$change, main = "Figure 1. Change in food inflation across 25 countries", xlab = "Change in food inflation (percentage points, after minus before)", ylab = "Number of countries")
 
