@@ -64,3 +64,4 @@ print(aggregate(change ~ region, data = countries, FUN = median))
 print(aggregate(change ~ region, data = countries, FUN = mean))
 
 
+print(aggregate(cbind(inflation_before, inflation_after) ~ region, data = countries, FUN = median))
