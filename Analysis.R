@@ -68,7 +68,7 @@ print(aggregate(cbind(inflation_before, inflation_after) ~ region, data = countr
 
 
 # ---------------------------------------------------------------------
-# SECTION 3. Figure 1 - histogram of the change               [Hisam]
+# SECTION 3. Figure 1 - histogram of the change               
 # ---------------------------------------------------------------------
 dir.create("figures", showWarnings = FALSE)
 png("figures/fig1_histogram.png", width = 900, height = 650)
@@ -76,6 +76,8 @@ hist(countries$change,
      main = "Figure 1. Change in food inflation across 25 countries",
      xlab = "Change in food inflation (percentage points, after minus before)",
      ylab = "Number of countries")
+abline(v = 0, lty = 2)
+abline(v = median(countries$change), col = "red", lwd = 2)
 dev.off()
-
 hist(countries$change, main = "Figure 1. Change in food inflation across 25 countries", xlab = "Change in food inflation (percentage points, after minus before)", ylab = "Number of countries")
+
