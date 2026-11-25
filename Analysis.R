@@ -78,6 +78,11 @@ hist(countries$change,
      ylab = "Number of countries")
 abline(v = 0, lty = 2)
 abline(v = median(countries$change), col = "red", lwd = 2)
+legend("topleft",
+       legend = c("No change (0)", "Median change"),
+       col = c("black", "red"),
+       lty = c(2, 1),
+       bty = "n")
 dev.off()
 hist(countries$change, main = "Figure 1. Change in food inflation across 25 countries", xlab = "Change in food inflation (percentage points, after minus before)", ylab = "Number of countries")
 
