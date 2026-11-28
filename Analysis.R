@@ -117,5 +117,7 @@ print(summary_table)
 countries$rose <- ifelse(countries$change > 0, 1, 0)   # 1 = inflation rose
 summary_table$countries_rose <- aggregate(rose ~ region, data = countries, FUN = sum)$rose
 
+write.csv(summary_table, "figures/table1_summary_by_region.csv", row.names = FALSE)
+
 
 
