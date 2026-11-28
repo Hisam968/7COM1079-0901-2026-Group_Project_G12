@@ -105,5 +105,13 @@ boxplot(change ~ region, data = countries,
                bty    = "n")
 dev.off()
 
+# ---------------------------------------------------------------------
+# SECTION 5. Summary table for the report                     (Marvin)
+# ---------------------------------------------------------------------
+summary_table <- aggregate(change ~ region, data = countries, FUN = median)
+colnames(summary_table)[2] <- "median_change"
+summary_table$n <- as.vector(table(countries$region))
+print(summary_table)
+
 
 
