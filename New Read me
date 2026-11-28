@@ -1,1 +1,20 @@
+# Food inflation after Russia's invasion of Ukraine, by region (ds243)
+7COM1079 Team Research and Development Project, University of Hertfordshire.
+Group 12: Alif, Hisam, Latifi, Muiz, Marvin.
+
+## How to run
+1. Open `7COM1079-0901-2026-Group_Project_G12.Rproj` in RStudio.
+2. Open `Analysis.R` and click Source.
+3. No extra packages are needed (base R only). Figures are saved in `figures/`.
+
+## What is in Analysis.R
+| Section | Owner | Output |
+|---|---|---|
+| 1. Prepare the data | Alif | data/processed/country_change.csv |
+| 2. Descriptive statistics | Hisam | summaries and medians by region |
+| 3. Figure 1 - histogram | Latifi | figures/fig1_histogram.png |
+| 4. Figure 2 - boxplot by region | Muiz | figures/fig2_boxplot_by_region.png |
+| 5. Summary table for the report | Marvin | figures/table1_summary_by_region.csv |
+
+Data: World Bank Real-Time Food Prices, version 2 October 2023 (doi:10.48529/5hgz-q149).
 
